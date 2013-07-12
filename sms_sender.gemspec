@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sms_sender/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sms_sender"
+  spec.name          = "SmsSender"
   spec.version       = SmsSender::VERSION
   spec.authors       = ["Seliverstov Maxim"]
   spec.email         = ["maxim.web.developer@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Gem which sends sms}
+  spec.summary       = %q{Gem which sends sms}
   spec.homepage      = ""
   spec.license       = "MIT"
 
