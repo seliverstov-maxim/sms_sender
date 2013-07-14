@@ -16,9 +16,13 @@ module SmsGearApi
 
     private
 
-    def pass_hash
+    def md5_pass_hash
       return @pass_hash if @pass_hash
-      @pass_hash = Digest::MD5.hexdigest @pass
+      @pass_hash = Digest::MD5.hexdigest @passw if @passw
+    end
+
+    def target_to_str(target)
+      target.respond_to?(:join) ? target.join(', ') : target
     end
   end
 end
