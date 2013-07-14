@@ -6,6 +6,20 @@ describe SmsGearApi do
   end
 
   it 'should send sms' do
-    @sms_gear_api.send_sms('79084774210', 'maxim', 'hello world?').should be_true
+    params = {
+      target: '79084774210',
+      sender: 'maxim',
+      body: 'hello world!'
+    }
+    @sms_gear_api.send_sms(params).should be_true
+  end
+
+  it 'should send bulk sms' do
+    params = {
+      target: ['79084774210', '79084774210'],
+      sender: 'maxim',
+      body: 'hello world!'
+    }
+    @sms_gear_api.send_sms(params).should be_true
   end
 end
