@@ -4,10 +4,11 @@ require 'digest/md5'
 
 module SmsGearApi
   class Base
-    attr_accessor :login, :passw
+    attr_accessor :login, :passw, :url
     def initialize(params = {})
       @login = params[:login]
       @passw = params[:passw]
+      @url = URI(params[:url])
     end
 
     def send_sms(params = {})
