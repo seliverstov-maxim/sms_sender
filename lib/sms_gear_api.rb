@@ -10,6 +10,10 @@ module SmsGearApi
       @passw = params[:passw]
     end
 
+    def send_sms(params = {})
+      true
+    end
+
     private
 
     def pass_hash
