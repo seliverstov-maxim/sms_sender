@@ -12,6 +12,14 @@ module SmsGearApi
     end
 
     def send_sms(params = {})
+      params[:target] = target_to_str params[:target]
+      params[:user] = @login
+      params[:pass] = md5_pass_hash
+      params[:action] = 'post_sms'
+
+      res = Net::HTTP.post_form(@url, params)
+      puts params[:target]
+      puts res.body
       true
     end
 
