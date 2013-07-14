@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'sms_sender'
+require 'sms_gear_api'
 Bundler.require
 
 if ENV["TRAVIS"]

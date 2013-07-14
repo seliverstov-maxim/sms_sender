@@ -1,3 +1,3 @@
-module SmsSender
+module SmsGearApi
   VERSION = "0.0.1"
 end
